@@ -16,16 +16,16 @@ public class stepsCompraProducto {
     public void setUp(){
         setTheStage(new OnlineCast());
     }
-    @Given("{string} navega por la página {string}")
-    public void navegaPorLaPágina(String actorName, String url) {
+    @Given("{string} navega por la pagina {string}")
+    public void navegaPorLaPagina(String actorName, String url) {
         theActorCalled(actorName).attemptsTo(Open.url(url));
     }
     @When("busca el producto {string}")
     public void buscaElProducto(String producto) {
         theActorInTheSpotlight().attemptsTo(AgregarProducto.configure(producto));
     }
-    @When("llena la información de despacho")
-    public void llenaLaInformaciónDeDespacho(io.cucumber.datatable.DataTable dataTable) {
+    @When("llena la informacion de despacho")
+    public void llenaLaInformacionDeDespacho(io.cucumber.datatable.DataTable dataTable) {
         // Write code here that turns the phrase above into concrete actions
         // For automatic transformation, change DataTable to one of
         // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
@@ -35,8 +35,8 @@ public class stepsCompraProducto {
         // For other transformations you can register a DataTableType.
         throw new io.cucumber.java.PendingException();
     }
-    @When("continua a la opción de pago")
-    public void continuaALaOpciónDePago() {
+    @When("continua a la opcion de pago")
+    public void continuaALaOpcionDePago() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }

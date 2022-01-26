@@ -3,6 +3,9 @@ package tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Enter;
+
+import static userinterface.HomePage.BUSCAR_PRODUCTO;
 
 public class AgregarProducto implements Task {
 
@@ -15,7 +18,7 @@ public class AgregarProducto implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-            
+                Enter.theValue(producto).into(BUSCAR_PRODUCTO)
         );
     }
 
