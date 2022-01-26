@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import tasks.AgregarProducto;
 
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
@@ -20,8 +21,8 @@ public class stepsCompraProducto {
         theActorCalled(actorName).attemptsTo(Open.url(url));
     }
     @When("busca el producto {string}")
-    public void buscaElProducto(String string) {
-        theActorInTheSpotlight().attemptsTo();
+    public void buscaElProducto(String producto) {
+        theActorInTheSpotlight().attemptsTo(AgregarProducto.configure(producto));
     }
     @When("llena la información de despacho")
     public void llenaLaInformaciónDeDespacho(io.cucumber.datatable.DataTable dataTable) {
