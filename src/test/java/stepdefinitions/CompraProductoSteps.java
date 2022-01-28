@@ -10,7 +10,7 @@ import tasks.AgregarProducto;
 
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
-public class stepsCompraProducto {
+public class CompraProductoSteps {
 
     @Before
     public void setUp(){

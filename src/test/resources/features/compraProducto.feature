@@ -1,3 +1,4 @@
+@stories
 Feature: Comprar producto en falabella
   Yo como usuario
   Quiero buscar un producto
