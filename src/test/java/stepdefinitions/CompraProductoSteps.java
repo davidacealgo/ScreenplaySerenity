@@ -16,10 +16,12 @@ public class CompraProductoSteps {
     public void setUp(){
         setTheStage(new OnlineCast());
     }
+
     @Given("{string} navega por la pagina {string}")
     public void navegaPorLaPagina(String actorName, String url) {
         theActorCalled(actorName).attemptsTo(Open.url(url));
     }
+
     @When("busca el producto {string}")
     public void buscaElProducto(String producto) {
         theActorInTheSpotlight().attemptsTo(AgregarProducto.configure(producto));
