@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import tasks.Login;
 import tasks.OpenUp;
 
 public class ChoucairAcademySteps {
@@ -15,7 +16,7 @@ public class ChoucairAcademySteps {
 
     @Given("that {string} wants to learn automation at the Academy Choucair")
     public void thatWantsToLearnAutomationAtTheAcademyChoucair(String actorName) {
-        OnStage.theActorCalled(actorName).wasAbleTo(OpenUp.academyPage());
+        OnStage.theActorCalled(actorName).wasAbleTo(OpenUp.academyPage(), Login.onThePage());
     }
     @When("he searches for the course {string} on the choucair academy platform")
     public void heSearchesForTheCourseOnTheChoucairAcademyPlatform(String string) {
