@@ -7,5 +7,5 @@
   @scenario
     Scenario: Search automation course
     Given that 'Lauren' wants to learn automation at the Academy Choucair
-    When he searches for the course "Recursos Automatización Bancolombia" on the choucair academy platform
-    Then he finds the course called "Recursos Automatización Bancolombia"
+    When he searches for the course "Patrones de Automatización" on the choucair academy platform
+    Then he finds the course called "Patrones de Automatización"

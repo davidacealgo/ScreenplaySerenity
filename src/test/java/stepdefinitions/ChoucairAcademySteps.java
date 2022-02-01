@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import tasks.Login;
 import tasks.OpenUp;
+import tasks.Search;
 
 public class ChoucairAcademySteps {
 
@@ -19,7 +20,8 @@ public class ChoucairAcademySteps {
         OnStage.theActorCalled(actorName).wasAbleTo(OpenUp.academyPage(), Login.onThePage());
     }
     @When("he searches for the course {string} on the choucair academy platform")
-    public void heSearchesForTheCourseOnTheChoucairAcademyPlatform(String string) {
+    public void heSearchesForTheCourseOnTheChoucairAcademyPlatform(String course) {
+        OnStage.theActorInTheSpotlight().attemptsTo(Search.the(course));
     }
     @Then("he finds the course called {string}")
     public void heFindsTheCourseCalled(String string) {
