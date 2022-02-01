@@ -13,4 +13,7 @@ public class SearchCoursePage extends PageObject {
             .locatedBy("//button[@class = 'btn btn-secondary']");
     public static final Target COURSE_LINK = Target.the("Link of searched course")
             .locatedBy("//h4/a[contains(text(), 'Patrones')]");
+    public static final Target NAME_COURSE = Target.the("Name of the course")
+            .locatedBy("//h3//a[contains(text(), 'Patrones')]");
+
 }

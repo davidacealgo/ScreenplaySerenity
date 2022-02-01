@@ -2,6 +2,8 @@ package questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.questions.Text;
+import userinterface.SearchCoursePage;
 
 public class Answer implements Question<Boolean> {
 
@@ -17,6 +19,13 @@ public class Answer implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return null;
+        boolean expectedResult = false;
+        String nameCourse = Text.of(SearchCoursePage.NAME_COURSE).viewedBy(actor).asString();
+        System.out.println(nameCourse);
+        System.out.println(question);
+        if (question.equals(nameCourse)){
+            expectedResult= true;
+        }
+        return expectedResult;
     }
 }
