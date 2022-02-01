@@ -11,6 +11,6 @@ public class SearchCoursePage extends PageObject {
             .located(By.id("coursesearchbox"));
     public static final Target SEARCH_BUTTON = Target.the("Button to search the course")
             .locatedBy("//button[@class = 'btn btn-secondary']");
-    public static final Target COURSE_TEXT = Target.the("Text of searched course")
-            .locatedBy("//h4/a[contains(text(), 'Patrones de Automatización')]");
+    public static final Target COURSE_LINK = Target.the("Link of searched course")
+            .locatedBy("//h4/a[contains(text(), 'Patrones')]");
 }

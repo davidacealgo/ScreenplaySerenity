@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Scroll;
 import userinterface.SearchCoursePage;
 
 public class Search implements Task {
@@ -24,7 +25,8 @@ public class Search implements Task {
         actor.attemptsTo(Click.on(SearchCoursePage.UNIVERSITY_CARD),
                 Enter.theValue(course).into(SearchCoursePage.SEARCH_FIELD),
                 Click.on(SearchCoursePage.SEARCH_BUTTON),
-                Click.on(SearchCoursePage.COURSE_TEXT));
+                Scroll.to(SearchCoursePage.COURSE_LINK).andAlignToBottom(),
+                Click.on(SearchCoursePage.COURSE_LINK));
 
     }
 }

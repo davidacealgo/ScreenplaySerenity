@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 public class ChoucairLoginPage extends PageObject {
 
     public static final Target LOGIN_BUTTON = Target.the("Button to shows the form of login")
-            .located(By.xpath("//a[@class='btn btn-info btn-sm text-white']/"));
+            .located(By.xpath("//a[@class='btn btn-info btn-sm text-white']"));
 
     public static Target USERNAME = Target.the("Username field to login")
             .located(By.id("username"));
