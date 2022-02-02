@@ -4,10 +4,13 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import questions.Answer;
 import tasks.Login;
 import tasks.OpenUp;
+import tasks.Search;
 
 public class ChoucairAcademySteps {
 
@@ -19,9 +22,11 @@ public class ChoucairAcademySteps {
         OnStage.theActorCalled(actorName).wasAbleTo(OpenUp.academyPage(), Login.onThePage());
     }
     @When("he searches for the course {string} on the choucair academy platform")
-    public void heSearchesForTheCourseOnTheChoucairAcademyPlatform(String string) {
+    public void heSearchesForTheCourseOnTheChoucairAcademyPlatform(String course) {
+        OnStage.theActorInTheSpotlight().attemptsTo(Search.the(course));
     }
-    @Then("he finds the course called {string}")
-    public void heFindsTheCourseCalled(String string) {
+    @Then("^he finds the course called (.*)$")
+    public void heFindsTheCourseCalled(String question) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(question)));
     }
 }

@@ -20,6 +20,6 @@ public class Login implements Task {
         actor.attemptsTo(Click.on(ChoucairLoginPage.LOGIN_BUTTON),
                 Enter.theValue("dacevedog").into(ChoucairLoginPage.USERNAME),
                 Enter.theValue("Choucair2022*").into(ChoucairLoginPage.PASSWORD),
-                Click.on(ChoucairLoginPage.ENTER_BUTTON)));
+                Click.on(ChoucairLoginPage.ENTER_BUTTON));
     }
 }
